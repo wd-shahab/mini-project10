@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+body{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: hsl(0, 0%, 81%);
+}
+.continer{
+    width: 252px;
+}
+.verifi{
+    color: hsl(0, 0%, 63%);
+    opacity: 50%;
+}
+.bottem{
+    font-size: 12px;
+    opacity: 70%;
+    color: hsl(0, 0%, 83%);
+}
+.name{
+    color: hsl(210, 46%, 95%);
+}
+.top{
+    margin: 1rem 0;
+    font-size: 15px;
+    color: hsl(210, 46%, 95%);
+}
+.box{
+    border-radius: 2%;
+    padding: 19px;
+    margin: .5rem 0;
+    overflow: hidden;
+}
+.item1{
+    background-color: hsl(263, 55%, 52%);
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: right 10% top;
+}
+.item3 .name,.item3 .bottem,.item5 .bottem, .item5 .name{
+    color: hsl(219, 19%, 35%);
+}
+.item3 .top, .item5 .top{
+    color: hsl(219, 29%, 14%);
+}
+.item3, .item5{
+    background-color: hsl(0, 0%, 100%);
+    
+}
+.item2{
+    background-color: hsl(219, 19%, 35%);
+}
+.item4{
+    background-color: hsl(219, 29%, 14%);
+}
+.info{
+    display: flex;
+}
+.prof{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    margin-right: 5px;
+}
+.item1 .prof{
+    content: url(./images/image-daniel.jpg);
+}
+.item2 .prof{
+    content: url(./images/image-jonathan.jpg);
+}
+.item3 .prof{
+    content: url(./images/image-jeanette.jpg);
+}
+.item4 .prof{
+    content: url(./images/image-patrick.jpg);
+}
+.item5 .prof{
+    content: url(./images/image-kira.jpg);
+}
+@media screen and (min-width: 600px) {
+    .continer{
+        width: 76.1%;
+        display: grid;
+        grid-template-rows: repeat(2, 250px);
+        grid-template-columns: repeat(auto-fit, minmax(220px, 220px));
+        grid-auto-rows: 250px;
+        gap: 10px;
+    }
+    .item3{
+        order: 3;
+    }
+    .item4{
+        grid-column-end: span 2;
+        order: 4;
+    }
+    .item5{
+        order: 2;
+        grid-row-end: span 2;
+    }
+    .item1{
+        grid-column-end: span 2;
+        order: 0;
+    }
+}
